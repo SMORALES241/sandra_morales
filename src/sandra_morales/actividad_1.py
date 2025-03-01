@@ -1,6 +1,7 @@
 import json
 
 
+
 class Ingestiones():
     def __init__(self):
         self.ruta_static="src/sandra_morales/static/"
@@ -45,20 +46,8 @@ class Ingestiones():
         pass
     
     def  leer_api(self,url=""):
-        parametros = 1
-        if parametros==0:
-            url = "{}/{}/{}/".format(url,params["coin"],params["method"])
-        else:
-            url = url
-            
-        try:
-            response = requests.get(url)
-            response.raise_for_status()
-            return response.json()
-        except requests.exceptions.RequestException as error:
-            print(error)
-            return {}
-
+        pass    
+        
     def  escribir_json(self,datos):
         pass
     
@@ -89,10 +78,7 @@ print("************************************************************")
 nombre_archivo = "info copy.txt"
 datos_txt_dos = inges.leer_varios_txt(nombre_archivo)
 print(datos_txt_dos)
-print(inges.leer_api(url="https://api.techniknews.net/ipgeo/181.78.14.2"))
-# inges.escribir_txt(nombre="archivo_json",datos=datos_json)
-# inges.escribir_txt(nombre="archivo_txt",datos=datos_txt)
-# inges.escribir_txt(nombre="archivo_txt_copy",datos=datos_txt_dos)
-    
-    
-    
+
+#inges.escribir_txt(nombre="archivo_json",datos=datos_json)
+#inges.escribir_txt(nombre="archivo_txt",datos=datos_txt)
+#inges.escribir_txt(nombre="archivo_txt_copy",datos=datos_txt_dos)
